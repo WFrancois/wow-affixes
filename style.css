@@ -1,0 +1,51 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+body {
+    margin: 50px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #555;
+}
+
+.affix-1:before  { background-image:url('/images/overflowing.jpg'); }
+.affix-2:before  { background-image:url('/images/skittish.jpg');  }
+.affix-3:before  { background-image:url('/images/volcanic.jpg');  }
+.affix-4:before  { background-image:url('/images/necrotic.jpg');  }
+.affix-5:before  { background-image:url('/images/teeming.jpg');  }
+.affix-6:before  { background-image:url('/images/raging.jpg');  }
+.affix-7:before  { background-image:url('/images/bolstering.jpg');  }
+.affix-8:before  { background-image:url('/images/sanguine.jpg');  }
+.affix-9:before  { background-image:url('/images/tyrannical.jpg');  }
+.affix-10:before { background-image:url('/images/fortified.jpg');  }
+
+.affix:before {
+    border-radius:50%;
+    -webkit-border-radius: 50%;
+    padding-right: 20px;
+    content:' ';
+    background-size: 20px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.affix {
+    float: left;
+}
+
+.container {
+    margin-top: 100px;
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1,
+h2,
+strong,
+a {
+  color: #333;
+}
+
+h1 {
+    margin-left: 100px !important;
+}
