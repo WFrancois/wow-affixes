@@ -35,7 +35,7 @@ if(date('Y', $startWeek) != 2016) {
     $weekNumber += 53;
 }
 
-$numberAffix = ($weekNumber + NA_DELAY) % 8;
+$numberAffix = ($weekNumber + EU_DELAY) % 8;
 
 // echo date('d/m/Y', $startWeek) . ' <br />';
 // echo 'This week : <br />';
