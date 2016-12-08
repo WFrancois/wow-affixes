@@ -17,6 +17,8 @@ if(!($now >= $startWeek && $now <= $endWeek)) {
 const EU_DELAY = 1;
 const NA_DELAY = -1;
 
+$brutAffixes = array('bolstering', 'fortified', 'necrotic', 'overflowing', 'raging', 'sanguine', 'skittish', 'teeming', 'tyrannical', 'volcanic');
+
 $affixes = array(
     array(array(6, 'Raging'),     array(4, 'Necrotic'),    array(10, 'Fortified')),
     array(array(7, 'Bolstering'), array(1, 'Overflowing'), array(9, 'Tyrannical')),
@@ -50,6 +52,7 @@ $numberAffix = ($weekNumber + NA_DELAY) % 8;
 <head>
 <title>WoW's affixes</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" type="image/jpeg" href="/images/<?= $brutAffixes[array_rand($brutAffixes)]; ?>.jpg"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
