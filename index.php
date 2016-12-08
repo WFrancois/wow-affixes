@@ -57,21 +57,21 @@ $numberAffix = ($weekNumber + EU_DELAY) % 8;
 </head>
 <body>
 <div class="container">
-    <h1 class="">WoW Affixes (On EU)</h1>
+    <h1 class="col-md-offset-2">WoW Affixes (On EU)</h1>
     <div class="col-md-6">
         <h2>This Week</h2>
         <h4>(<?= date('d/m/Y', $startWeek); ?>)</h4>
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][0][0]; ?>/" class="affix affix-<?= $affixes[$numberAffix][0][0]; ?>"><?= $affixes[$numberAffix][0][1]; ?></a><br />
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][1][0]; ?>/" class="affix affix-<?= $affixes[$numberAffix][1][0]; ?>"><?= $affixes[$numberAffix][1][1]; ?></a><br />
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][2][0]; ?>/" class="affix affix-<?= $affixes[$numberAffix][2][0]; ?>"><?= $affixes[$numberAffix][2][1]; ?></a><br />
+        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][0][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][0][0]; ?>"><?= $affixes[$numberAffix][0][1]; ?></a><br />
+        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][1][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][1][0]; ?>"><?= $affixes[$numberAffix][1][1]; ?></a><br />
+        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][2][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][2][0]; ?>"><?= $affixes[$numberAffix][2][1]; ?></a><br />
     </div>
     <?php $numberAffix += 1; $numberAffix %= 8; ?>
     <div class="col-md-6">
         <h2>Next Week</h2>
         <h4>(<?= date('d/m/Y', $endWeek); ?>)</h4>
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][0][0]; ?>/" class="affix affix-<?= $affixes[$numberAffix][0][0]; ?>"><?= $affixes[$numberAffix][0][1]; ?></a><br />
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][1][0]; ?>/" class="affix affix-<?= $affixes[$numberAffix][1][0]; ?>"><?= $affixes[$numberAffix][1][1]; ?></a><br />
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][2][0]; ?>/" class="affix affix-<?= $affixes[$numberAffix][2][0]; ?>"><?= $affixes[$numberAffix][2][1]; ?></a><br />
+        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][0][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][0][0]; ?>"><?= $affixes[$numberAffix][0][1]; ?></a><br />
+        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][1][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][1][0]; ?>"><?= $affixes[$numberAffix][1][1]; ?></a><br />
+        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][2][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][2][0]; ?>"><?= $affixes[$numberAffix][2][1]; ?></a><br />
     </div>
 </div>
 <script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script><script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>

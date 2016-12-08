@@ -8,18 +8,18 @@ body {
     color: #555;
 }
 
-.affix-1:before  { background-image:url('/images/overflowing.jpg'); }
-.affix-2:before  { background-image:url('/images/skittish.jpg');  }
-.affix-3:before  { background-image:url('/images/volcanic.jpg');  }
-.affix-4:before  { background-image:url('/images/necrotic.jpg');  }
-.affix-5:before  { background-image:url('/images/teeming.jpg');  }
-.affix-6:before  { background-image:url('/images/raging.jpg');  }
-.affix-7:before  { background-image:url('/images/bolstering.jpg');  }
-.affix-8:before  { background-image:url('/images/sanguine.jpg');  }
-.affix-9:before  { background-image:url('/images/tyrannical.jpg');  }
-.affix-10:before { background-image:url('/images/fortified.jpg');  }
+.affixes-1:before  { background-image:url('/images/overflowing.jpg'); }
+.affixes-2:before  { background-image:url('/images/skittish.jpg');  }
+.affixes-3:before  { background-image:url('/images/volcanic.jpg');  }
+.affixes-4:before  { background-image:url('/images/necrotic.jpg');  }
+.affixes-5:before  { background-image:url('/images/teeming.jpg');  }
+.affixes-6:before  { background-image:url('/images/raging.jpg');  }
+.affixes-7:before  { background-image:url('/images/bolstering.jpg');  }
+.affixes-8:before  { background-image:url('/images/sanguine.jpg');  }
+.affixes-9:before  { background-image:url('/images/tyrannical.jpg');  }
+.affixes-10:before { background-image:url('/images/fortified.jpg');  }
 
-.affix:before {
+.affixes:before {
     border-radius:50%;
     -webkit-border-radius: 50%;
     padding-right: 20px;
@@ -29,7 +29,7 @@ body {
     margin-right: 10px;
 }
 
-.affix {
+.affixes {
     float: left;
 }
 
@@ -44,8 +44,4 @@ h2,
 strong,
 a {
   color: #333;
-}
-
-h1 {
-    margin-left: 100px !important;
 }
