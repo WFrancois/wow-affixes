@@ -37,15 +37,47 @@ if(date('Y', $startWeek) != 2016) {
 
 $numberAffix = ($weekNumber + EU_DELAY) % 8;
 
-// echo date('d/m/Y', $startWeek) . ' <br />';
-// echo 'This week : <br />';
-// echo $affixes[$numberAffix][0]. ' ' . $affixes[$numberAffix][1] . ' ' . $affixes[$numberAffix][2] . ' <br /><br />';
 
-// $numberAffix += 1;
-// $numberAffix %= 8;
-// echo date('d/m/Y', $endWeek) . ' <br />';
-// echo 'Next week : <br />';
-// echo $affixes[$numberAffix][0]. ' ' . $affixes[$numberAffix][1] . ' ' . $affixes[$numberAffix][2] . ' <br />'; 
+// Language
+$languageDisplayWowhead = 'en';
+$languageDisplayOther = 'en';
+
+$acceptLanguage = array('en');
+if(!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    $acceptLanguage = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+}
+
+$languageAllowedWowhead = array('en' => 'www', 'de' => 'de', 'es' => 'es', 'fr' => 'fr', 'it' => 'it', 'pt' => 'pt', 'ru' => 'ru', 'ko' => 'ko', 'cn' => 'cn');
+$languageAllowedOther = array('fr' => 'fr', 'en' => 'en');
+
+foreach ($acceptLanguage as $key => $value) {
+    $language = substr($value, 0, 2);
+    if(!empty($languageAllowedWowhead[$language])) {
+        $languageDisplayWowhead = $language;
+        break;
+    }
+}
+foreach ($acceptLanguage as $key => $value) {
+    $language = substr($value, 0, 2);
+    if(!empty($languageAllowedOther[$language])) {
+        $languageDisplayOther = $language;
+        break;
+    }
+}
+
+$title = array(
+    'fr' => 'Affix Mythic (Europe)',
+    'en' => 'WoW Affixes (On EU)',
+);
+$thisWeek = array(
+    'fr' => 'Cette semaine',
+    'en' => 'This Week',
+);
+$nextWeek = array(
+    'fr' => 'La semaine prochaine',
+    'en' => 'Next Week',
+);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,21 +89,21 @@ $numberAffix = ($weekNumber + EU_DELAY) % 8;
 </head>
 <body>
 <div class="container">
-    <h1 class="col-md-offset-2">WoW Affixes (On EU)</h1>
+    <h1 class="col-md-offset-2"><?= $title[$languageDisplayOther]; ?></h1>
     <div class="col-md-6">
-        <h2>This Week</h2>
+        <h2><?= $thisWeek[$languageDisplayOther]; ?></h2>
         <h4>(<?= date('d/m/Y', $startWeek); ?>)</h4>
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][0][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][0][0]; ?>"><?= $affixes[$numberAffix][0][1]; ?></a><br />
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][1][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][1][0]; ?>"><?= $affixes[$numberAffix][1][1]; ?></a><br />
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][2][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][2][0]; ?>"><?= $affixes[$numberAffix][2][1]; ?></a><br />
+        <a href="http://<?= $languageAllowedWowhead[$languageDisplayWowhead]; ?>.wowhead.com/affix=<?= $affixes[$numberAffix][0][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][0][0]; ?>"><?= $affixes[$numberAffix][0][1]; ?></a><br />
+        <a href="http://<?= $languageAllowedWowhead[$languageDisplayWowhead]; ?>.wowhead.com/affix=<?= $affixes[$numberAffix][1][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][1][0]; ?>"><?= $affixes[$numberAffix][1][1]; ?></a><br />
+        <a href="http://<?= $languageAllowedWowhead[$languageDisplayWowhead]; ?>.wowhead.com/affix=<?= $affixes[$numberAffix][2][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][2][0]; ?>"><?= $affixes[$numberAffix][2][1]; ?></a><br />
     </div>
     <?php $numberAffix += 1; $numberAffix %= 8; ?>
     <div class="col-md-6">
-        <h2>Next Week</h2>
+        <h2><?= $nextWeek[$languageDisplayOther]; ?></h2>
         <h4>(<?= date('d/m/Y', $endWeek); ?>)</h4>
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][0][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][0][0]; ?>"><?= $affixes[$numberAffix][0][1]; ?></a><br />
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][1][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][1][0]; ?>"><?= $affixes[$numberAffix][1][1]; ?></a><br />
-        <a href="http://www.wowhead.com/affix=<?= $affixes[$numberAffix][2][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][2][0]; ?>"><?= $affixes[$numberAffix][2][1]; ?></a><br />
+        <a href="http://<?= $languageAllowedWowhead[$languageDisplayWowhead]; ?>.wowhead.com/affix=<?= $affixes[$numberAffix][0][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][0][0]; ?>"><?= $affixes[$numberAffix][0][1]; ?></a><br />
+        <a href="http://<?= $languageAllowedWowhead[$languageDisplayWowhead]; ?>.wowhead.com/affix=<?= $affixes[$numberAffix][1][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][1][0]; ?>"><?= $affixes[$numberAffix][1][1]; ?></a><br />
+        <a href="http://<?= $languageAllowedWowhead[$languageDisplayWowhead]; ?>.wowhead.com/affix=<?= $affixes[$numberAffix][2][0]; ?>/" class="affixes affixes-<?= $affixes[$numberAffix][2][0]; ?>"><?= $affixes[$numberAffix][2][1]; ?></a><br />
     </div>
 </div>
 <script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script><script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
