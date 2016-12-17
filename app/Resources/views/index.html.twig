@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1 class="col-md-offset-2">WoW Affixes</h1>
+<div class="col-md-6">
+    <h2>This Week</h2>
+    <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
+    <a href="http://www.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
+    <a href="http://www.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
+    <a href="http://www.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+</div>
+{{ wowaffixes.nextWeek() }}
+<div class="col-md-6">
+    <h2>Next Week</h2>
+    <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
+    <a href="http://www.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
+    <a href="http://www.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
+    <a href="http://www.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+</div>
+{% endblock %}
