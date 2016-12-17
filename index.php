@@ -106,7 +106,7 @@ $nextWeek = array(
     <body>
         <div class="choseLanguage">
             <form method="post">
-                <select name="language" onchange="this.form.submit()">
+                <select name="language" onchange="this.form.submit()" class="form-control">
                     <?php foreach($languageIso as $iso => $name) { ?>
                         <option value="<?= $iso; ?>" 
                             <?php if($languageUsing == $iso) { echo 'selected'; } ?>>
