@@ -1,5 +1,15 @@
+calendar_no_language:
+    path:     /calendar
+    defaults: { _controller: AppBundle:Calendar:index}
+
 homepage:
     path:     /{_locale}
     defaults: { _controller: AppBundle:Homepage:index, _locale: en}
+    requirements:
+        _locale: en|fr|de|es|it|pt|ru|ko|cn
+
+calendar:
+    path:     /{_locale}/calendar
+    defaults: { _controller: AppBundle:Calendar:index, _locale: en}
     requirements:
         _locale: en|fr|de|es|it|pt|ru|ko|cn

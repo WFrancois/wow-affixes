@@ -50,6 +50,17 @@ twig:
             ru: Русский
             ko: 한국어
             cn: 简体中文
+        brutAffixes:
+            - bolstering
+            - fortified
+            - necrotic
+            - overflowing
+            - raging
+            - sanguine
+            - skittish
+            - teeming
+            - tyrannical
+            - volcanic
 
 # Doctrine Configuration
 doctrine:

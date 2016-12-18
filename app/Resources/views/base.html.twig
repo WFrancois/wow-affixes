@@ -1,6 +1,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}WoW's affixes!{% endblock %}</title>
+    <link rel="shortcut icon" type="image/jpeg" href="/images/{{ random(brutAffixes) }}.jpg"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -25,8 +26,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li {% if app.request.get('_route') == 'homepage' %} class="active" {% endif %}><a href="#">{% trans %}Homepage{% endtrans %} {% if app.request.get('_route') == 'homepage' %}<span class="sr-only">(current)</span>{% endif %}</a></li>
-                    <li {% if app.request.get('_route') == 'calendar' %} class="active" {% endif %}><a href="#">{% trans %}Calendar{% endtrans %} {% if app.request.get('_route') == 'calendar' %}<span class="sr-only">(current)</span>{% endif %}</a></li>
+                    <li {% if app.request.get('_route') == 'homepage' %} class="active" {% endif %}>
+                        <a href="{{ path('homepage', {'_locale': app.request.locale}) }}">{% trans %}Homepage{% endtrans %} {% if app.request.get('_route') == 'homepage' %}<span class="sr-only">(current)</span>{% endif %}</a>
+                    </li>
+                    <li {% if app.request.get('_route') in ['calendar', 'calendar_no_language'] %} class="active" {% endif %}>
+                        <a href="{{ path('calendar', {'_locale': app.request.locale}) }}">{% trans %}Calendar{% endtrans %} {% if app.request.get('_route') in ['calendar', 'calendar_no_language'] %}<span class="sr-only">(current)</span>{% endif %}</a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
