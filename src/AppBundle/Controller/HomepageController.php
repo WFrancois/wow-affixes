@@ -10,12 +10,10 @@ use Symfony\Component\HttpFoundation\Response;
 
 class HomepageController extends Controller
 {
-    /**
-     * @Route("/", name="homepage")
-     */
     public function indexAction(Request $request)
     {
         $wowweek = $this->get('app.wowweek');
+
         return $this->render('index.html.twig', array(
             'wowaffixes' => $wowweek,
         ));

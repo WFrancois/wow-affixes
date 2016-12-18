@@ -10,7 +10,7 @@ parameters:
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: [en] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -39,6 +39,17 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        languageIso:
+            fr: Français
+            en: English
+            de: Deutsch
+            es: Español
+            it: Italiano
+            pt: Portugês Brasileiro
+            ru: Русский
+            ko: 한국어
+            cn: 简体中文
 
 # Doctrine Configuration
 doctrine:

@@ -9,17 +9,37 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-    <div class="choseLanguage">
-        <form method="post">
-            <select name="language" onchange="this.form.submit()" class="form-control">
-                <?php foreach($languageIso as $iso => $name) { ?>
-                <option value="" ?>
-                <?= $name; ?>
-                </option>
-                <?php } ?>
-            </select>
-        </form>
-    </div>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">WoW Affixes</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li {% if app.request.get('_route') == 'homepage' %} class="active" {% endif %}><a href="#">{% trans %}Homepage{% endtrans %} {% if app.request.get('_route') == 'homepage' %}<span class="sr-only">(current)</span>{% endif %}</a></li>
+                    <li {% if app.request.get('_route') == 'calendar' %} class="active" {% endif %}><a href="#">{% trans %}Calendar{% endtrans %} {% if app.request.get('_route') == 'calendar' %}<span class="sr-only">(current)</span>{% endif %}</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ languageIso[app.request.locale] }} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {% for iso,name in languageIso %}
+                                <li><a href="/{{ iso }}">{{ name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    </nav>
     <div class="container">
         {% block body %}{% endblock %}
     </div>
@@ -27,6 +47,13 @@
         <i class="fa fa-lg fa-github"></i> <a href="https://github.com/WFrancois/wow-affixes">GitHub</a><br />
         Created By Wisak
     </footer>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
     <script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script><script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
     {% block javascripts %}{% endblock %}
 </body>
