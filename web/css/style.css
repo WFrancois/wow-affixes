@@ -53,6 +53,21 @@ a {
   color: #333;
 }
 
+@media screen and (min-width: 700px) {
+  .title-homepage {
+    text-align:center;
+  }
+  .next-affixes {
+    text-align: center;
+  }
+  .affix-display {
+    display: inline-block;
+  }
+  .affix-display:nth-child(1) {
+    margin-right: 150px;
+  }
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -64,8 +79,8 @@ a {
   text-align: center;
 }
 
-.choseLanguage {
+/*.choseLanguage {
     position: absolute;
     top: 5px;
     right: 5px;
-}
+}*/
