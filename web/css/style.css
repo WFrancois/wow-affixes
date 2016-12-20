@@ -53,10 +53,10 @@ a {
   color: #333;
 }
 
+.title {
+  text-align:center;
+}
 @media screen and (min-width: 700px) {
-  .title-homepage {
-    text-align:center;
-  }
   .next-affixes {
     text-align: center;
   }
