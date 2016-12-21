@@ -56,6 +56,26 @@ a {
 .title {
   text-align:center;
 }
+i.arrowToLeft, i.arrowToRight {
+  display: none;
+}
+
+@media screen and (max-width: 699px) {
+  .next-affixes {
+    display: inline-block;
+    width: 100%;
+  }
+  .calendar {
+    text-align: center;
+  }
+  .affixes {
+    float: none;
+    display: inline-block;
+  }
+  .affix-display {
+    margin-bottom: 40px;
+  }
+}
 @media screen and (min-width: 700px) {
   body {
     overflow:hidden;
@@ -69,16 +89,19 @@ a {
     -o-transition: all 2s linear;
     transition: all 2s linear;
   }
-  i.arrowToLeft {
+  i.arrowToLeft, i.arrowToRight {
+    display: inline;
     font-size: 50px;
     position: absolute;
-    top: 175px;
+    top: 175px;    
+  }
+  i.arrowToLeft.disabled, i.arrowToRight.disabled {
+    display: none;
+  }
+  i.arrowToLeft {
     left: 5px;
   }
   i.arrowToRight {
-    font-size: 50px;
-    position: absolute;
-    top: 175px;
     right: 5px;
   }
   .next-affixes {
