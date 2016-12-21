@@ -108,5 +108,17 @@
             }
             $('.calendar').css('margin-left', '-' + (current * 100) + '%');
         }
+
+        $(document).keydown(function(e){
+            switch(e.which) {
+                case 37:
+                nextAffix(1);
+                break;
+
+                case 39:
+                nextAffix();
+                break;
+            }
+        })
     </script>
 {% endblock %}

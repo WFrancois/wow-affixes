@@ -67,6 +67,7 @@ i.arrowToLeft, i.arrowToRight {
   }
   .calendar {
     text-align: center;
+    margin-left: 0px !important;
   }
   .affixes {
     float: none;
