@@ -18,7 +18,6 @@ class WowWeek
 
     const EU_Start_Week = 1451430000;
 
-    private static $affixesName = array('bolstering', 'fortified', 'necrotic', 'overflowing', 'raging', 'sanguine', 'skittish', 'teeming', 'tyrannical', 'volcanic');
     private static $affixesTurn = array(
         array(6, 4, 10),
         array(7, 1, 9),
