@@ -1,6 +1,5 @@
 <?php
 
-require 'app_dev.php';exit;
 use Symfony\Component\HttpFoundation\Request;
 
 /** @var \Composer\Autoload\ClassLoader $loader */
