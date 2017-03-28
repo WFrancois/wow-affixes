@@ -19,14 +19,14 @@ class WowWeek
     const EU_Start_Week = 1451430000;
 
     private static $affixesTurn = array(
-        array(6, 4, 10),
+        array('not-defined'),
         array(7, 1, 9),
-        array(8, 3, 10),
-        array(5, 4, 9),
-        array(6, 3, 9),
-        array(7, 2, 10),
-        array(8, 1, 9),
-        array(5, 2, 10),
+        array('not-defined'),
+        array('not-defined'),
+        array('not-defined'),
+        array('not-defined'),
+        array('not-defined'),
+        array('not-defined'),
     );
 
     private $weekNumber;
@@ -49,7 +49,7 @@ class WowWeek
     }
 
     public function getCurrentAffixes() {
-        return self::$affixesTurn[($this->weekNumber + self::EU_DELAY) % 8];
+        return self::$affixesTurn[($this->weekNumber + self::EU_DELAY) % count(self::$affixesTurn)];
     }
 
     public function getWednesday() {
