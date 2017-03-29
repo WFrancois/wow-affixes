@@ -15,9 +15,21 @@
             {% if wowaffixes.currentAffixes.0 == 'not-defined' %}
                 <i class="fa fa-info"></i> {% trans %}Not defined yet{% endtrans %}
             {% else %}
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {% if wowaffices.currentAffixes.0 == 'not-defined' %}
+                    {% trans %}Not defined yet{% endtrans %}<br />
+                {% else %}
+                    <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
+                {% endif %}
+                {% if wowaffices.currentAffixes.1 == 'not-defined' %}
+                    {% trans %}Not defined yet{% endtrans %}<br />
+                {% else %}
+                    <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
+                {% endif %}
+                {% if wowaffices.currentAffixes.2 == 'not-defined' %}
+                    {% trans %}Not defined yet{% endtrans %}<br />
+                {% else %}
+                    <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {% endif %}
             {% endif %}
         </div>
     </div>
