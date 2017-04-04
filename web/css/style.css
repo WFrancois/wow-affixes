@@ -25,6 +25,9 @@ body {
 .affixes-8:before  { background-image:url('/images/sanguine.jpg');  }
 .affixes-9:before  { background-image:url('/images/tyrannical.jpg');  }
 .affixes-10:before { background-image:url('/images/fortified.jpg');  }
+.affixes-11:before { background-image:url('/images/bursting.jpg');  }
+.affixes-12:before { background-image:url('/images/grievous.jpg');  }
+.affixes-13:before { background-image:url('/images/explosive.jpg');  }
 
 .affixes:before {
     border-radius:50%;
@@ -91,6 +94,15 @@ i.arrowToLeft, i.arrowToRight {
 
     .tmp-no-futur {
         margin-top: 50px;
+    }
+
+    .this-week {
+        float:left;
+    }
+
+    .next-week {
+        float: right;
+        margin-left: 200px;
     }
 
 

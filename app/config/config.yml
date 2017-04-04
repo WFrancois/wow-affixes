@@ -54,13 +54,15 @@ twig:
             - bolstering
             - fortified
             - necrotic
-            - overflowing
             - raging
             - sanguine
             - skittish
             - teeming
             - tyrannical
             - volcanic
+            - bursting
+            - grievous
+            - explosive
 
 # Doctrine Configuration
 doctrine:
