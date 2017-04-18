@@ -24,7 +24,7 @@ class WowWeek
         array(6, 3, 9),
         array(5, 13, 10),
         array(7, 12, 9),
-        array('not-defined'),
+        array(8, 3, 10),
         array('not-defined'),
         array('not-defined'),
     );
