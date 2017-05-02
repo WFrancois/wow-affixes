@@ -63,6 +63,7 @@ twig:
             - bursting
             - grievous
             - explosive
+            - quaking
 
 # Doctrine Configuration
 doctrine:
