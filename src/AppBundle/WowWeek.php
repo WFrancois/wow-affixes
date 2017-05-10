@@ -19,7 +19,7 @@ class WowWeek
     const EU_Start_Week = 1451430000;
 
     private static $affixesTurn = array(
-        array('not-defined'),
+        array(6, 4, 9),
         array('not-defined'),
         array(6, 3, 9),
         array(5, 13, 10),
