@@ -13,7 +13,7 @@ use DateTime;
 
 class WowWeek
 {
-    const EU_DELAY = 1;
+    const EU_DELAY = -6;
     const NA_DELAY = -1;
 
     const EU_Start_Week = 1451430000;
@@ -21,6 +21,11 @@ class WowWeek
     private static $affixesTurn = array(
         array(6, 4, 9),
         array(7, 2, 10),
+        array('not-defined'),
+        array('not-defined'),
+        array('not-defined'),
+        array('not-defined'),
+        array('not-defined'),
         array(6, 3, 9),
         array(5, 13, 10),
         array(7, 12, 9),
