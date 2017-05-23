@@ -21,7 +21,7 @@ class WowWeek
     private static $affixesTurn = array(
         array(6, 4, 9),
         array(7, 2, 10),
-        array('not-defined'),
+        array(5, 4, 9),
         array('not-defined'),
         array('not-defined'),
         array('not-defined'),
