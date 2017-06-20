@@ -13,7 +13,7 @@ use DateTime;
 
 class WowWeek
 {
-    const EU_DELAY = -6;
+    const EU_DELAY = 1;
     const NA_DELAY = -1;
 
     const EU_Start_Week = 1451430000;
@@ -25,7 +25,6 @@ class WowWeek
         array(8, 12, 10),
         array(7, 13, 9),
         array(11, 14, 10),
-        array('not-defined'),
         array(6, 3, 9),
         array(5, 13, 10),
         array(7, 12, 9),
