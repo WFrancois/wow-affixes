@@ -1,0 +1,46 @@
+# RELEASE PROCESS
+
+- make sure tests are passing
+    https://travis-ci.org/symfony/webpack-encore
+
+- make sure CHANGELOG is updated
+
+- update the master branch locally
+
+```
+git checkout master && git fetch origin && git merge origin/master
+```
+
+- tag the new version
+
+```
+npm version <update_type> -m "<message>"
+```
+
+- push the new release
+
+```
+git push origin --tags
+git push origin
+npm publish
+```
+
+- Update the release on GitHub (Edit Tag)
+
+## Title:
+
+vX.X.X
+
+## Description:
+
+Yes! New Release!
+
+To upgrade: `yarn upgrade`
+
+Changes: [v0.9.0..v0.9.1](https://github.com/symfony/webpack-encore/compare/v0.9.0...v0.9.1)
+
+Documentation: http://symfony.com/doc/current/frontend.html
+
+Highlights:
+
+FROM CHANGELOG
