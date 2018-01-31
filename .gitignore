@@ -1,3 +1,4 @@
+/.idea/
 
 ###> symfony/framework-bundle ###
 .env
@@ -6,4 +7,7 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
-/.idea/
+###> symfony/webpack-encore-pack ###
+/node_modules/
+/public/build/
+###< symfony/webpack-encore-pack ###
