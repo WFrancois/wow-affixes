@@ -1,6 +1,0 @@
-homepage:
-    path:     /
-    host:     "{_locale}.wowaffixes.info"
-    defaults: { _controller: AppBundle:Homepage:index, _locale: en}
-    requirements:
-        _locale: en|fr|de|es|it|pt|ru|ko|cn
