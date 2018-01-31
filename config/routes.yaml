@@ -1,3 +1,6 @@
 homepage:
     path: /
     controller: App\Controller\HomeController
+    host:     "{_locale}.wowaffixes.info"
+    requirements:
+        _locale: en|fr|de|es|it|pt|ru|ko|cn|www
