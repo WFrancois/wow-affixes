@@ -11,6 +11,7 @@
         "build": "encore production"
     },
     "dependencies": {
+        "jquery": "^3.3.1",
         "node-sass": "^4.7.2",
         "sass-loader": "^6.0.6",
         "webpack-notifier": "^1.5.1"

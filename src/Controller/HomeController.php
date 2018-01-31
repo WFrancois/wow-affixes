@@ -9,12 +9,15 @@
 namespace App\Controller;
 
 
+use App\Service\WowWeek;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class HomeController extends Controller
 {
-    public function __invoke()
+    public function __invoke(WowWeek $wowWeek)
     {
-
+        return $this->render('homepage.html.twig', [
+            'wowaffixes' => $wowWeek,
+        ]);
     }
 }
