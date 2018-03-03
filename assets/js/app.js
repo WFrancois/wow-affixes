@@ -41,3 +41,6 @@ $(document).keydown(function (e) {
             break;
     }
 });
+
+$('.js--switch-left').on('click', () => nextAffix(1));
+$('.js--switch-right').on('click', () => nextAffix());
