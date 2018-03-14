@@ -40,6 +40,7 @@
                 </li>
             </ul>
         </div>
+    </div>
 </nav>
 {% block body %}{% endblock %}
 <footer class="footer">
@@ -47,7 +48,8 @@
     Created By Wisak
 </footer>
 <script type="application/javascript" src="{{ asset('build/app.js') }}"></script>
-<script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script><script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
+<script>var whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+<script src="//wow.zamimg.com/widgets/power.js"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>
