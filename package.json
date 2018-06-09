@@ -8,11 +8,11 @@
         "build": "encore production"
     },
     "dependencies": {
-        "@symfony/webpack-encore": "^0.17.0",
+        "@symfony/webpack-encore": "^0.17.1",
         "bootstrap": "^3.3.7",
         "jquery": "^3.3.1",
-        "node-sass": "^4.7.2",
-        "sass-loader": "^6.0.6",
-        "webpack-notifier": "^1.5.1"
+        "node-sass": "^4.9.0",
+        "sass-loader": "^6.0.7",
+        "webpack-notifier": "^1.6.0"
     }
 }
