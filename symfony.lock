@@ -1,4 +1,13 @@
 {
+    "deployer/deployer": {
+        "version": "v6.3.0"
+    },
+    "deployer/phar-update": {
+        "version": "v2.1.0"
+    },
+    "pimple/pimple": {
+        "version": "v3.2.3"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -76,6 +85,9 @@
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.6.0"
+    },
+    "symfony/process": {
+        "version": "v4.1.4"
     },
     "symfony/routing": {
         "version": "4.0",

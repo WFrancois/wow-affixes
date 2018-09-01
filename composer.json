@@ -15,6 +15,7 @@
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
+        "deployer/deployer": "^6.3",
         "symfony/dotenv": "^4.0"
     },
     "config": {
@@ -49,7 +50,8 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "deploy": "dep deploy"
     },
     "conflict": {
         "symfony/symfony": "*"
