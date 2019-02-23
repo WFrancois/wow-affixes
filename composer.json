@@ -8,7 +8,6 @@
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.0",
-        "symfony/lts": "^4@dev",
         "symfony/translation": "^4.0",
         "symfony/twig-bundle": "^4.0",
         "symfony/webpack-encore-pack": "^1.0",
