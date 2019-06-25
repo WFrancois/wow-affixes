@@ -10,9 +10,10 @@ namespace App\Controller;
 
 
 use App\Service\WowWeek;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class HomeController extends Controller
+class HomeController extends AbstractController
 {
     public function __invoke(WowWeek $wowWeek)
     {
