@@ -1,34 +1,25 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Francois "Wisak" Wroblewski
- * Date: 17/12/2016
- * Time: 23:32
- */
 
 namespace App\Service;
 
 
 class WowWeek
 {
-    const EU_DELAY = 1;
-    const NA_DELAY = -1;
+    const EU_DELAY = 0;
 
-    const EU_Start_Week = 1451430000;
+    const EU_Start_Week = 1560895200;
 
     private static $affixesTurn = [
-        [6, 4, 9],
-        [7, 2, 10],
         [5, 3, 9],
-        [8, 12, 10],
-        [7, 13, 9],
-        [11, 14, 10],
-        [6, 3, 9],
-        [5, 13, 10],
-        [7, 12, 9],
-        [8, 4, 10],
-        [11, 2, 9],
         [5, 14, 10],
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
     ];
 
     private $weekNumber;

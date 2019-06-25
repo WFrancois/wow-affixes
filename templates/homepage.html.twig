@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% import 'components/affixList.html.twig' as affixList %}
 
 {% block body %}
     <h1 class="title">{% trans %}Mythic Affixes (On EU){% endtrans %}</h1>
@@ -9,17 +10,13 @@
             <div class="affix-display">
                 <h2>{% trans %}This Week{% endtrans %}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
                 <h2>{% trans %}Next Week{% endtrans %}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
         </div>
         <div class="next-affixes">
@@ -27,17 +24,13 @@
             <div class="affix-display">
                 <h2>+2 {% trans %}Week{% endtrans %}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
                 <h2>+3 {% trans %}Week{% endtrans %}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
         </div>
         <div class="next-affixes">
@@ -45,17 +38,13 @@
             <div class="affix-display">
                 <h2>+4 {% trans %}Week{% endtrans %}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
                 <h2>+5 {% trans %}Week{% endtrans %}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
         </div>
         <div class="next-affixes">
@@ -63,17 +52,13 @@
             <div class="affix-display">
                 <h2>+6 {% trans %}Week{% endtrans %}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
                 <h2>+7 {% trans %}Week{% endtrans %}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.0 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.0 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.1 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.1 }}"></a><br />
-                <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ wowaffixes.currentAffixes.2 }}/" class="affixes affixes-{{ wowaffixes.currentAffixes.2 }}"></a><br />
+                {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
         </div>
     </div>
