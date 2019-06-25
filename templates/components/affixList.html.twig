@@ -1,6 +1,6 @@
 {% macro display(affixes) %}
     {% if affixes is same as("Unknown") %}
-        {% trans %}Unknown{% endtrans %}
+        {% trans %}Not defined yet{% endtrans %}
     {% else %}
         {% for affix in affixes %}
             <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ affix }}/" class="affixes affixes-{{ affix }}"></a><br />
