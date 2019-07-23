@@ -15,7 +15,7 @@ class WowWeek
         [11, 2, 9],
         [7, 12, 10],
         [6, 13, 9],
-        'Unknown',
+        [8, 12, 10],
         'Unknown',
         'Unknown',
         'Unknown',
