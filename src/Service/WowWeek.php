@@ -19,7 +19,7 @@ class WowWeek
         [5, 3, 9],
         [7, 2, 10],
         [11,4,9],
-        'Unknown',
+        [8,14,10],
     ];
 
     private $weekNumber;
