@@ -10,7 +10,7 @@ class WowWeek
     const EU_Start_Week = 1560895200;
 
     private static $affixesTurn = [
-        'Unknown',
+        [7, 13, 9],
         'Unknown',
         [11, 2, 9],
         [7, 12, 10],
@@ -18,8 +18,8 @@ class WowWeek
         [8, 12, 10],
         [5, 3, 9],
         [7, 2, 10],
-        [11,4,9],
-        [8,14,10],
+        [11, 4, 9],
+        [8, 14, 10],
     ];
 
     private $weekNumber;
