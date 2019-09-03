@@ -5,13 +5,15 @@ namespace App\Service;
 
 class WowWeek
 {
-    const EU_DELAY = 0;
+    const EU_DELAY = 2;
 
     const EU_Start_Week = 1560895200;
 
     private static $affixesTurn = [
         [7, 13, 9],
-        'Unknown',
+        [11, 3, 10],
+        [6, 4, 9],
+        [5, 14, 10],
         [11, 2, 9],
         [7, 12, 10],
         [6, 13, 9],
