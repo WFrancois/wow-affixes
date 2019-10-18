@@ -10,18 +10,18 @@ class WowWeek
     const EU_Start_Week = 1560895200;
 
     private static $affixesTurn = [
-        [7, 13, 9],
-        [11, 3, 10],
-        [6, 4, 9],
-        [5, 14, 10],
-        [11, 2, 9],
-        [7, 12, 10],
-        [6, 13, 9],
-        [8, 12, 10],
-        [5, 3, 9],
-        [7, 2, 10],
-        [11, 4, 9],
-        [8, 14, 10],
+        [7, 13, 9, 'Tides'],
+        [11, 3, 10, 'Enchanted'],
+        [6, 4, 9, 'Void'],
+        [5, 14, 10, 'Tides'],
+        [11, 2, 9, 'Enchanted'],
+        [7, 12, 10, 'Void'],
+        [6, 13, 9, 'Tides'],
+        [8, 12, 10, 'Enchanted'],
+        [5, 3, 9, 'Void'],
+        [7, 2, 10, 'Tides'],
+        [11, 4, 9, 'Enchanted'],
+        [8, 14, 10, 'Void'],
     ];
 
     private $weekNumber;

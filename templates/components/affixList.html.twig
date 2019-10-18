@@ -2,8 +2,12 @@
     {% if affixes is same as("Unknown") %}
         {% trans %}Not defined yet{% endtrans %}
     {% else %}
-        {% for affix in affixes %}
-            <a href="http://{% trans %}www{% endtrans %}.wowhead.com/affix={{ affix }}/" class="affixes affixes-{{ affix }}"></a><br />
+        {% for i in 0..2 %}
+            <a href="https://{% trans %}www{% endtrans %}.wowhead.com/affix={{ affixes[i] }}/" class="affixes affixes-{{ affixes[i] }}"></a><br/>
         {% endfor %}
+        <span class="affixes affixes-119">
+            {{ affixes[3] }} -
+            <a href="https://{% trans %}www{% endtrans %}.wowhead.com/affix=119/"></a>
+        </span>
     {% endif %}
 {% endmacro %}
