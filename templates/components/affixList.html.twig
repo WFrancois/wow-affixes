@@ -3,7 +3,7 @@
         {% trans %}Not defined yet{% endtrans %}
     {% else %}
         {% for affix in affixes %}
-            <a href="https://{% trans %}www{% endtrans %}.wowhead.com/affix={{ affixes[i] }}/" class="affixes affixes-{{ affixes[i] }}"></a><br/>
+            <a href="https://{% trans %}www{% endtrans %}.wowhead.com/affix={{ affix }}/" class="affixes affixes-{{ affix }}"></a><br/>
         {% endfor %}
     {% endif %}
 {% endmacro %}
