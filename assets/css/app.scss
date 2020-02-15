@@ -14,6 +14,19 @@ body {
   margin-bottom: 80px !important;
 }
 
+body.darkmode {
+  color: #ddd;
+  background-color: #333;
+
+  footer {
+    background-color: #2f2f2f;
+  }
+
+  a {
+    color: #a3d4ff;
+  }
+}
+
 
 .affixes-1:before  { background-image:url('../images/overflowing.jpg'); }
 .affixes-2:before  { background-image:url('../images/skittish.jpg');  }
