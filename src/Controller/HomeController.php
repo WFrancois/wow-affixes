@@ -18,9 +18,6 @@ class HomeController extends AbstractController
 {
     public function __invoke(Request $request, WowWeek $wowWeek)
     {
-        if (!empty($request->get('force'))) {
-            var_dump($_COOKIE);
-        }
         $isNightMode = $_COOKIE['isNightMode'] ?? 'false';
         $isNightMode = filter_var($isNightMode, FILTER_VALIDATE_BOOLEAN);
 
