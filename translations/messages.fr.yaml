@@ -1,11 +1,9 @@
 www: fr
-Homepage: Accueil
-Calendar: Calendrier
-Mythic Affixes (On EU): Affix Mythic (Europe)
-This Week: Cette semaine
-Next Week: Semaine prochaine
-Week: Semaine
-Warning: Attention
-Not defined yet: Pas encore défini
-Currently only the week's affix can be display as we don't have the full new rotation: En ce moment, seulement les affixs de la semaine peuvent être affichés car nous n'avons pas la rotation complète
-a tool for streamer to show the talents, gears and traits of you and your party members in mythic+ and raids: un outil pour les streamers permettant de monter les talents, stuff et traits de toi et de ton groupe en mythic+ et raid
+nav:
+    homepage: 'Acceuil'
+homepage:
+    main_title: 'Affix Mythic (Europe)'
+    this_week: 'Cette semaine'
+    next_week: 'Semaine prochaine'
+    plus_number_week: '+%number% Semaine'
+    not_defined_yet: 'Pas encore défini'

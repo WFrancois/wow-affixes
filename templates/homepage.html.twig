@@ -2,33 +2,19 @@
 {% import 'components/affixList.html.twig' as affixList %}
 
 {% block body %}
-    <h1 class="title">{% trans %}Mythic Affixes (On EU){% endtrans %}</h1>
+    <h1 class="title">{{ 'homepage.main_title'|trans }}</h1>
     <div class="calendar">
         <a href="#"><i class="fa fa-angle-left arrowToLeft js--switch-left"></i></a>
         <a href="#"><i class="fa fa-angle-right arrowToRight js--switch-right"></i></a>
         <div class="next-affixes">
             <div class="affix-display">
-                <h2>{% trans %}This Week{% endtrans %}</h2>
+                <h2>{{ 'homepage.this_week'|trans }}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
                 {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
-                <h2>{% trans %}Next Week{% endtrans %}</h2>
-                <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                {{ affixList.display(wowaffixes.currentAffixes) }}
-            </div>
-        </div>
-        <div class="next-affixes">
-            {{ wowaffixes.nextWeek() }}
-            <div class="affix-display">
-                <h2>+2 {% trans %}Week{% endtrans %}</h2>
-                <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
-                {{ affixList.display(wowaffixes.currentAffixes) }}
-            </div>
-            {{ wowaffixes.nextWeek() }}
-            <div class="affix-display">
-                <h2>+3 {% trans %}Week{% endtrans %}</h2>
+                <h2>{{ 'homepage.next_week'|trans }}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
                 {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
@@ -36,13 +22,13 @@
         <div class="next-affixes">
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
-                <h2>+4 {% trans %}Week{% endtrans %}</h2>
+                <h2>{{ 'homepage.plus_number_week'|trans({'%number%': '2'}) }}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
                 {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
-                <h2>+5 {% trans %}Week{% endtrans %}</h2>
+                <h2>{{ 'homepage.plus_number_week'|trans({'%number%': '3'}) }}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
                 {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
@@ -50,13 +36,27 @@
         <div class="next-affixes">
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
-                <h2>+6 {% trans %}Week{% endtrans %}</h2>
+                <h2>{{ 'homepage.plus_number_week'|trans({'%number%': '4'}) }}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
                 {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
             {{ wowaffixes.nextWeek() }}
             <div class="affix-display">
-                <h2>+7 {% trans %}Week{% endtrans %}</h2>
+                <h2>{{ 'homepage.plus_number_week'|trans({'%number%': '5'}) }}</h2>
+                <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
+                {{ affixList.display(wowaffixes.currentAffixes) }}
+            </div>
+        </div>
+        <div class="next-affixes">
+            {{ wowaffixes.nextWeek() }}
+            <div class="affix-display">
+                <h2>{{ 'homepage.plus_number_week'|trans({'%number%': '6'}) }}</h2>
+                <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
+                {{ affixList.display(wowaffixes.currentAffixes) }}
+            </div>
+            {{ wowaffixes.nextWeek() }}
+            <div class="affix-display">
+                <h2>{{ 'homepage.plus_number_week'|trans({'%number%': '7'}) }}</h2>
                 <h4>({{ wowaffixes.wednesday().format('d/m/Y') }})</h4>
                 {{ affixList.display(wowaffixes.currentAffixes) }}
             </div>
