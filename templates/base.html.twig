@@ -15,7 +15,7 @@
     <meta property="og:description" content="Check what is the current WoW Affixes rotation">
     {% block stylesheets %}{% endblock %}
 </head>
-<body class="{% if isNightMode %}darkmode{% endif %}">
+<body class="{% if app.request.cookies.getBoolean('isNightMode') %}darkmode{% endif %}">
 <nav class="navbar navbar-default {% if isNightMode %}navbar-inverse{% endif %} navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
