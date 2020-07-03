@@ -1,8 +1,5 @@
 framework:
-    assets:
-        json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
     secret: '%env(APP_SECRET)%'
-    #default_locale: en
     #csrf_protection: ~
     #http_method_override: true
 
