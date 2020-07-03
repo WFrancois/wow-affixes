@@ -3,7 +3,7 @@
         {{ 'homepage.not_defined_yet'|trans }}
     {% else %}
         {% for affix in affixes %}
-            <a href="https://{% trans %}www{% endtrans %}.wowhead.com/affix={{ affix }}/" class="affixes affixes-{{ affix }}"></a><br/>
+            <a href="https://{{ app.request.locale }}.wowhead.com/affix={{ affix }}/" class="affixes affixes-{{ affix }}"></a><br/>
         {% endfor %}
     {% endif %}
 {% endmacro %}
