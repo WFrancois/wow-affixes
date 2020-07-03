@@ -10,7 +10,7 @@
         "symfony/framework-bundle": "^4.0",
         "symfony/translation": "^4.0",
         "symfony/twig-bundle": "^4.0",
-        "symfony/webpack-encore-pack": "^1.0",
+        "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
