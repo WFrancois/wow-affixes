@@ -11,12 +11,12 @@
         "symfony/translation": "^4.4",
         "symfony/twig-bundle": "^4.4",
         "symfony/webpack-encore-pack": "^1.0",
-        "symfony/yaml": "^4.4"
+        "symfony/yaml": "^4.4",
+        "symfony/dotenv": "^4.4"
     },
     "require-dev": {
         "deployer/deployer": "^6.3",
         "symfony/debug-bundle": "^4.4",
-        "symfony/dotenv": "^4.4",
         "symfony/web-profiler-bundle": "^4.4"
     },
     "config": {

@@ -5,6 +5,9 @@
     "deployer/phar-update": {
         "version": "v2.1.0"
     },
+    "php": {
+        "version": "7.4"
+    },
     "pimple/pimple": {
         "version": "v3.2.3"
     },
