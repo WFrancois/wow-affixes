@@ -1,0 +1,8 @@
+nav:
+    homepage: 'Homepage'
+homepage:
+    main_title: 'Mythic Affixes (On EU)'
+    this_week: 'This Week'
+    next_week: 'Next Week'
+    plus_number_week: '+%number% Week'
+    not_defined_yet: 'Not defined yet'
