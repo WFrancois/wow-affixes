@@ -11,6 +11,13 @@ Encore
     // will create public/build/app.js and public/build/app.css
     .addEntry('app', './assets/js/app.js')
 
+    // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
+    .splitEntryChunks()
+
+    // will require an extra script tag for runtime.js
+    // but, you probably want this, unless you're building a single-page app
+    .enableSingleRuntimeChunk()
+
     // allow sass/scss files to be processed
     .enableSassLoader()
 
@@ -26,7 +33,7 @@ Encore
     .enableBuildNotifications()
 
     // create hashed filenames (e.g. app.abc123.css)
-    .enableVersioning()
+    .enableVersioning(Encore.isProduction())
 ;
 
 // export the final configuration

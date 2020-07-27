@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}WoW's affixes!{% endblock %}</title>
     <link rel="shortcut icon" type="image/jpeg" href="{{ asset('build/images/' ~ random(brutAffixes) ~ '.jpg') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
+    {{ encore_entry_link_tags('app') }}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="og:title" content="WoW Affixes">
     <meta property="og:type" content="website">
@@ -61,7 +61,7 @@
     <i class="fa fa-lg fa-github"></i> <a href="https://github.com/WFrancois/wow-affixes">GitHub</a><br />
     Created By <a href="https://wisak.me">Isak</a>
 </footer>
-<script type="application/javascript" src="{{ asset('build/app.js') }}"></script>
+{{ encore_entry_script_tags('app') }}
 <script>var whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
 <script src="//wow.zamimg.com/widgets/power.js"></script>
 {% block javascripts %}{% endblock %}
