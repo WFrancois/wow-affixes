@@ -33,11 +33,6 @@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li {% if app.request.get('_route') in ['homepage', 'homepage_nolocale'] %} class="active" {% endif %}>
-                    <a href="{{ path('homepage', {'_locale': app.request.locale}) }}">{{ 'nav.homepage'|trans }} {% if app.request.get('_route') == 'homepage' %}<span class="sr-only">(current)</span>{% endif %}</a>
-                </li>
-            </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#" class="js--switch-to-darkmode">
