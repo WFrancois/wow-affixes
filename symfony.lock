@@ -95,6 +95,9 @@
             "ref": "96158c961360a5857c49b303fbb88af5a3ae4ff9"
         }
     },
+    "symfony/http-client-contracts": {
+        "version": "v2.3.1"
+    },
     "symfony/http-foundation": {
         "version": "v4.0.4"
     },
@@ -170,6 +173,20 @@
     "symfony/var-exporter": {
         "version": "v4.2.3"
     },
+    "symfony/web-profiler-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "6bdfa1a95f6b2e677ab985cd1af2eae35d62e0f6"
+        },
+        "files": [
+            "config/packages/dev/web_profiler.yaml",
+            "config/packages/test/web_profiler.yaml",
+            "config/routes/dev/web_profiler.yaml"
+        ]
+    },
     "symfony/webpack-encore-bundle": {
         "version": "1.6",
         "recipe": {
@@ -187,20 +204,6 @@
             "config/packages/webpack_encore.yaml",
             "package.json",
             "webpack.config.js"
-        ]
-    },
-    "symfony/web-profiler-bundle": {
-        "version": "3.3",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "3.3",
-            "ref": "6bdfa1a95f6b2e677ab985cd1af2eae35d62e0f6"
-        },
-        "files": [
-            "config/packages/dev/web_profiler.yaml",
-            "config/packages/test/web_profiler.yaml",
-            "config/routes/dev/web_profiler.yaml"
         ]
     },
     "symfony/webpack-encore-pack": {

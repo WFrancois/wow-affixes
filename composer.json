@@ -1,4 +1,6 @@
 {
+    "name": "wfrancois/wow-affixes",
+    "description": "Display current (and future) wow affix",
     "type": "project",
     "license": "proprietary",
     "require": {

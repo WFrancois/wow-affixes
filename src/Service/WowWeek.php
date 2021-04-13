@@ -3,13 +3,18 @@
 namespace App\Service;
 
 
+use DateTimeImmutable;
+
 class WowWeek
 {
     const EU_DELAY = 3;
 
     const EU_Start_Week = 1606863600;
 
-    private static $affixesTurn = [
+    /**
+     * @var array|int[][]
+     */
+    private static array $affixesTurn = [
         [10, 122, 124, 121],
         [9, 11, 13, 121],
         [10, 8, 12, 121],
@@ -24,43 +29,43 @@ class WowWeek
         [9, 7, 4, 121],
     ];
 
-    private $weekNumber;
+    private int $weekNumber;
 
     public function __construct()
     {
         $this->weekNumber = self::getCurrentWeekNumber();
     }
 
-    public function getWeekNumber()
+    public function getWeekNumber(): int
     {
         return $this->weekNumber;
     }
 
-    public function nextWeek()
+    public function nextWeek(): void
     {
         $this->weekNumber += 1;
     }
 
-    public function setWeekNumber(int $weekNumber)
+    public function setWeekNumber(int $weekNumber): void
     {
         $this->weekNumber = $weekNumber;
     }
 
-    public function getCurrentAffixes()
+    public function getCurrentAffixes(): array
     {
         return self::$affixesTurn[($this->weekNumber + self::EU_DELAY) % count(self::$affixesTurn)];
     }
 
-    public function getWednesday()
+    public function getWednesday(): DateTimeImmutable
     {
         $wednesday = strtotime('wednesday +' . $this->weekNumber . ' week', self::EU_Start_Week);
 
-        return (new \DateTime())->setTimestamp($wednesday);
+        return (new DateTimeImmutable())->setTimestamp($wednesday);
     }
 
-    public static function getCurrentWeekNumber()
+    public static function getCurrentWeekNumber(): float
     {
-        $week0 = (new \DateTime())->setTimestamp(self::EU_Start_Week);
+        $week0 = (new DateTimeImmutable())->setTimestamp(self::EU_Start_Week);
 
         $now = strtotime('now');
         $startWeek = strtotime('this Tuesday -6 day + 9 hour', $now);
@@ -74,9 +79,8 @@ class WowWeek
             }
         }
 
-        $thisWeek = (new \DateTime())->setTimestamp($startWeek);
+        $thisWeek = (new DateTimeImmutable())->setTimestamp($startWeek);
 
-        $interval = date_diff($week0, $thisWeek);
-        return floor($interval->format('%a') / 7);
+        return floor($week0->diff($thisWeek)->format('%a') / 7);
     }
 }

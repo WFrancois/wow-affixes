@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}WoW's affixes!{% endblock %}</title>
+    <title>{% block title %}WoW's affixes{% endblock %}</title>
     <link rel="shortcut icon" type="image/jpeg" href="{{ asset('build/images/' ~ random(brutAffixes) ~ '.jpg') }}" />
     {{ encore_entry_link_tags('app') }}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -14,7 +14,8 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="wowaffixes.info">
     <meta property="og:url" content="https://wowaffixes.info/">
-    <meta property="og:description" content="Check what is the current WoW Affixes rotation">
+    <meta property="description" content="Check what are the current and future World of Warcraft Affixes">
+    <meta property="og:description" content="Check what are the current and future World of Warcraft Affixes">
     {% block stylesheets %}{% endblock %}
 </head>
 {% set isNightMode = app.request.cookies.getBoolean('isNightMode') %}
