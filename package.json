@@ -10,9 +10,8 @@
     "dependencies": {
         "@symfony/webpack-encore": "^0.30.2",
         "bootstrap": "^3.4.1",
-        "jquery": "^3.5.1",
         "node-sass": "^4.14.1",
         "sass-loader": "^8.0.2",
-        "webpack-notifier": "^1.7.0"
+        "webpack-notifier": "^1.13.0"
     }
 }

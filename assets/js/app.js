@@ -1,18 +1,18 @@
 require('../css/app.scss');
 require('bootstrap');
 
-const $ = require('jquery');
-
-const buttonLeft = $('.arrowToLeft');
-const buttonRight = $('.arrowToRight');
+const calendar = document.querySelector('.calendar');
+const buttonLeft = document.querySelector('.arrowToLeft');
+const buttonRight = document.querySelector('.arrowToRight');
 
 let current = 0;
 
-buttonLeft.addClass('disabled');
+buttonLeft.classList.add('disabled');
 
 function nextAffix(previous) {
-    buttonLeft.removeClass('disabled');
-    buttonRight.removeClass('disabled');
+    buttonLeft.classList.remove('disabled');
+    buttonRight.classList.remove('disabled');
+
     if (previous) {
         if (current > 0) {
             current -= 1;
@@ -22,28 +22,35 @@ function nextAffix(previous) {
             current += 1;
         }
     }
+
     if (current >= 3) {
-        buttonRight.addClass('disabled');
+        buttonRight.classList.add('disabled');
     }
     if (current <= 0) {
-        buttonLeft.addClass('disabled');
+        buttonLeft.classList.add('disabled');
     }
-    $('.calendar').css('margin-left', '-' + (current * 100) + '%');
+
+    calendar.style.marginLeft = `-${current * 100}%`;
 }
 
-$(document).keydown(function (e) {
-    switch (e.which) {
-        case 37:
-            nextAffix(1);
+document.addEventListener('keydown', function (e) {
+    switch (e.code) {
+        case 'ArrowLeft':
+            nextAffix(true);
             break;
-        case 39:
+        case 'ArrowRight':
             nextAffix();
             break;
     }
 });
 
-$('.js--switch-left').on('click', () => nextAffix(1));
-$('.js--switch-right').on('click', () => nextAffix());
+document.querySelector('.js--switch-left').onclick = () => {
+    nextAffix(true);
+}
+document.querySelector('.js--switch-right').onclick = () => {
+    nextAffix();
+}
+
 
 const buttonNightMode = document.querySelector('.js--switch-to-darkmode');
 const textNightMode = buttonNightMode.querySelector('span');
