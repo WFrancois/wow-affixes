@@ -12,21 +12,21 @@ class WowWeek
     const EU_Start_Week = 1606863600;
 
     /**
-     * @var array|int[][]
+     * @var array|(int[]|string)[]
      */
     private static array $affixesTurn = [
-        [10, 122, 124, 121],
-        [9, 11, 13, 121],
-        [10, 8, 12, 121],
-        [9, 6, 14, 121],
-        [10, 11, 3, 121],
-        [9, 7, 124, 121],
-        [10, 123, 12, 121],
-        [9, 122, 4, 121],
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
         [10, 8, 14, 121],
-        [9, 6, 13, 121],
-        [10, 123, 3, 121],
-        [9, 7, 4, 121],
+        [10, 11, 124, 121], // start of s2 rotation // TODO: Update seasonal affix
+        'Unknown',
+        'Unknown',
     ];
 
     private int $weekNumber;
@@ -51,7 +51,10 @@ class WowWeek
         $this->weekNumber = $weekNumber;
     }
 
-    public function getCurrentAffixes(): array
+    /**
+     * @return int[]|string
+     */
+    public function getCurrentAffixes()
     {
         return self::$affixesTurn[($this->weekNumber + self::EU_DELAY) % count(self::$affixesTurn)];
     }
