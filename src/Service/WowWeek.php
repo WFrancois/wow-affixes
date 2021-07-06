@@ -23,9 +23,9 @@ class WowWeek
         'Unknown',
         'Unknown',
         'Unknown',
-        [10, 8, 14, 121],
-        [10, 11, 124, 121], // start of s2 rotation // TODO: Update seasonal affix
         'Unknown',
+        [10, 11, 124, 121], // start of s2 rotation // TODO: Update seasonal affix
+        [9, 6, 3, 128],
         'Unknown',
     ];
 
