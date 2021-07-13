@@ -24,9 +24,9 @@ class WowWeek
         'Unknown',
         'Unknown',
         'Unknown',
-        [10, 11, 124, 121], // start of s2 rotation // TODO: Update seasonal affix
+        [10, 11, 124, 128], // start of s2 rotation
         [9, 6, 3, 128],
-        'Unknown',
+        [10, 122, 12, 128],
     ];
 
     private int $weekNumber;
