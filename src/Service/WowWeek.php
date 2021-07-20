@@ -15,7 +15,7 @@ class WowWeek
      * @var array|(int[]|string)[]
      */
     private static array $affixesTurn = [
-        'Unknown',
+        [9, 123, 4, 128],
         'Unknown',
         'Unknown',
         'Unknown',
