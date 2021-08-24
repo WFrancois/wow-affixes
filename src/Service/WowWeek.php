@@ -20,7 +20,7 @@ class WowWeek
         [9, 8, 124, 128],
         [10, 6, 13, 128],
         [9, 11, 3, 128],
-        'Unknown',
+        [10, 123, 12, 128],
         'Unknown',
         'Unknown',
         'Unknown',
