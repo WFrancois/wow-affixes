@@ -21,7 +21,7 @@ class WowWeek
         [10, 6, 13, 128],
         [9, 11, 3, 128],
         [10, 123, 12, 128],
-        'Unknown',
+        [9, 122, 14, 128],
         'Unknown',
         'Unknown',
         [10, 11, 124, 128], // start of s2 rotation
