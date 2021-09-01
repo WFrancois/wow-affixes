@@ -7,14 +7,17 @@ use DateTimeImmutable;
 
 class WowWeek
 {
-    const EU_DELAY = 3;
+    const EU_DELAY = 0;
 
-    const EU_Start_Week = 1606863600;
+    const EU_Start_Week = 1625036400;
 
     /**
      * @var array|(int[]|string)[]
      */
     private static array $affixesTurn = [
+        [10, 11, 124, 128],
+        [9, 6, 3, 128],
+        [10, 122, 12, 128],
         [9, 123, 4, 128],
         [10, 7, 14, 128],
         [9, 8, 124, 128],
@@ -24,9 +27,12 @@ class WowWeek
         [9, 122, 14, 128],
         'Unknown',
         'Unknown',
-        [10, 11, 124, 128], // start of s2 rotation
-        [9, 6, 3, 128],
-        [10, 122, 12, 128],
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
     ];
 
     private int $weekNumber;
