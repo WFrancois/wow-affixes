@@ -9,23 +9,23 @@ class WowWeek
 {
     const EU_DELAY = 0;
 
-    const EU_Start_Week = 1625036400;
+    const EU_Start_Week = 1645599600;
 
     /**
      * @var array|(int[]|string)[]
      */
     private static array $affixesTurn = [
-        'Unknown',
-        'Unknown',
-        'Unknown',
-        'Unknown',
-        'Unknown',
-        'Unknown',
-        'Unknown',
-        'Unknown',
-        'Unknown',
-        'Unknown',
         [10, 8, 12, 128],
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
+        'Unknown',
         'Unknown',
     ];
 
