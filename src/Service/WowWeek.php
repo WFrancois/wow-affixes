@@ -15,10 +15,10 @@ class WowWeek
      * @var array|(int[]|string)[]
      */
     private static array $affixesTurn = [
-        [10, 8, 12, 128],
+        [10, 8, 12, 130],
         [9, 7, 13, 130],
         [10, 11, 124, 130],
-        'Unknown',
+        [9, 6, 3, 130],
         'Unknown',
         'Unknown',
         'Unknown',
