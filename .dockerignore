@@ -1,0 +1,11 @@
+.git
+.gitignore
+
+.github
+.idea
+
+var
+vendor
+node_modules
+
+.env*
