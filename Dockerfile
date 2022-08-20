@@ -39,4 +39,5 @@ RUN npm run build
 
 EXPOSE 80
 
+RUN ["chmod", "+x", "./deploy/entrypoint.sh"]
 CMD ["./deploy/entrypoint.sh"]
