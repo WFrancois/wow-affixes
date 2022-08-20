@@ -5,7 +5,9 @@
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "build": "encore production"
+        "build": "encore production",
+        "docker:build": "docker build -t wow-affixes .",
+        "docker:run": "docker run --rm -p 8080:80 --name wow-affixes wow-affixes"
     },
     "dependencies": {
         "@symfony/webpack-encore": "^0.30.2",
