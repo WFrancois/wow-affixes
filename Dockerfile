@@ -35,6 +35,8 @@ RUN echo "APP_ENV=prod" >> .env
 
 RUN composer install --no-dev --optimize-autoloader
 
+RUN npm run build
+
 EXPOSE 80
 
 CMD ["./deploy/entrypoint.sh"]
