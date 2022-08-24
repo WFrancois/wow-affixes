@@ -4,6 +4,7 @@ FROM node:14 AS node
 FROM php:7.4-fpm
 
 LABEL com.centurylinklabs.watchtower.stop-signal="SIGKILL"
+LABEL com.centurylinklabs.watchtower.enable="true"
 
 COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
 COPY --from=node /usr/local/bin/node /usr/local/bin/node
