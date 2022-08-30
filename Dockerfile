@@ -34,7 +34,6 @@ RUN npm ci
 
 RUN echo "APP_ENV=prod" >> .env
 
-RUN composer config --no-plugins allow-plugins.symfony/flex yes
 RUN composer install --no-dev --optimize-autoloader
 
 RUN npm run build
