@@ -1,5 +1,7 @@
 nav:
     homepage: 'Accueil'
+    night_mode: 'Mode sombre'
+    light_mode: 'Mode clair'
 homepage:
     main_title: 'Affix Mythic+'
     this_week: 'Cette semaine'

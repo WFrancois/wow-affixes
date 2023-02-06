@@ -1,5 +1,7 @@
 nav:
     homepage: 'Homepage'
+    night_mode: 'Night mode'
+    light_mode: 'Light mode'
 homepage:
     main_title: 'Mythic Affixes (On EU)'
     this_week: 'This Week'
