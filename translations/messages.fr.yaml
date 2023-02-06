@@ -1,7 +1,7 @@
 nav:
     homepage: 'Accueil'
 homepage:
-    main_title: 'Affix Mythic (Europe)'
+    main_title: 'Affix Mythic+'
     this_week: 'Cette semaine'
     next_week: 'Semaine prochaine'
     plus_number_week: '+%number% Semaine'
