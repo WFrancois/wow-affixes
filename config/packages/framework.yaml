@@ -1,7 +1,4 @@
 framework:
-    trusted_headers: [ 'x-forwarded-for', 'x-forwarded-host', 'x-forwarded-proto', 'x-forwarded-port', 'x-forwarded-prefix' ]
-    trusted_proxies: '127.0.0.1'
-
     secret: '%env(APP_SECRET)%'
     #csrf_protection: ~
     #http_method_override: true
