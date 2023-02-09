@@ -1,0 +1,10 @@
+nav:
+    homepage: 'Página principal'
+    night_mode: 'Modo claro'
+    light_mode: 'Modo oscuro'
+homepage:
+    main_title: 'Afijos de Míticas (En EU)'
+    this_week: 'Semana actual'
+    next_week: 'Siguiente semana'
+    plus_number_week: 'Semana +%number%'
+    not_defined_yet: 'No definido'
