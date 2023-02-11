@@ -1,0 +1,10 @@
+nav:
+    homepage: 'Startseite'
+    night_mode: 'Dunkler Modus'
+    light_mode: 'Heller Modus'
+homepage:
+    main_title: 'Mythisch-Affixe (EU)'
+    this_week: 'Diese Woche'
+    next_week: 'Nächste Woche'
+    plus_number_week: 'Woche +%number%'
+    not_defined_yet: 'Noch nicht festgelegt'
