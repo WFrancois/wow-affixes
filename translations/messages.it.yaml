@@ -1,0 +1,10 @@
+nav:
+    homepage: 'Pagina Principale'
+    night_mode: 'Modalità chiara'
+    light_mode: 'Modalità scura'
+homepage:
+    main_title: 'Affissi delle Mitiche (In EU)'
+    this_week: 'Questa Settimana'
+    next_week: 'Prossima Settimana'
+    plus_number_week: 'Settimana +%number%'
+    not_defined_yet: 'Non definito'
