@@ -17,7 +17,7 @@ class WowWeek
     private static array $affixesTurn = [
         'Unknown',
         [10, 6, 14, 132],
-        'Unknown',
+        [9, 124, 6],
         'Unknown',
         'Unknown',
         'Unknown',
