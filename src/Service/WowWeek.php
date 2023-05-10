@@ -16,7 +16,7 @@ class WowWeek
      */
     private static array $affixesTurn = [
         'Unknown',
-        [10, 6, 14, 132],
+        'Unknown',
         [9, 124, 6],
         'Unknown',
         'Unknown',
@@ -69,14 +69,14 @@ class WowWeek
         $week0 = (new DateTimeImmutable())->setTimestamp(self::EU_Start_Week);
 
         $now = strtotime('now');
-        $startWeek = strtotime('this Tuesday -6 day + 9 hour', $now);
-        $endWeek = strtotime('this Tuesday +32 hour +59 minute +59 second', $now);
+        $startWeek = strtotime('this Tuesday -6 day + 5 hour', $now);
+        $endWeek = strtotime('this Tuesday +28 hour +59 minute +59 second', $now);
         if (!($now >= $startWeek && $now <= $endWeek)) {
-            $startWeek = strtotime('this Tuesday +1 week -6 day + 9 hour', $now);
-            $endWeek = strtotime('this Tuesday +1 week +32 hour +59 minute +59 second', $now);
+            $startWeek = strtotime('this Tuesday +1 week -6 day + 5 hour', $now);
+            $endWeek = strtotime('this Tuesday +1 week +28 hour +59 minute +59 second', $now);
             if (!($now >= $startWeek && $now <= $endWeek)) {
-                $startWeek = strtotime('this Tuesday -1 week -6 day + 9 hour', $now);
-                $endWeek = strtotime('this Tuesday -1 week +32 hour +59 minute +59 second', $now);
+                $startWeek = strtotime('this Tuesday -1 week -6 day + 5 hour', $now);
+                $endWeek = strtotime('this Tuesday -1 week +28 hour +59 minute +59 second', $now);
             }
         }
 
