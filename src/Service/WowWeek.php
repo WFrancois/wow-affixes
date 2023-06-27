@@ -24,7 +24,7 @@ class WowWeek
         [9, 3, 8],
         [10, 124, 11],
         [9, 135, 7],
-        'Unknown',
+        [10, 136, 8],
     ];
 
     private int $weekNumber;
