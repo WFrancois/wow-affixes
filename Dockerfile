@@ -11,7 +11,7 @@ COPY --from=node /usr/local/bin/node /usr/local/bin/node
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 
-RUN npm i -g npm
+RUN npm i -g npm@6
 RUN apt update && apt upgrade -y
 RUN apt install python zip libzip-dev -y
 
