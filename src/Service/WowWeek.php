@@ -7,7 +7,7 @@ use DateTimeImmutable;
 
 class WowWeek
 {
-    const EU_DELAY = 0;
+    const EU_DELAY = 1;
 
     const EU_Start_Week = 1726632000;
 
