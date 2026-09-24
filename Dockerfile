@@ -14,9 +14,9 @@ RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 RUN npm i -g npm@6
 # bullseye is EOL: use archive.debian.org
 RUN sed -i \
-      -e 's|deb.debian.org/debian-security|archive.debian.org/debian-security|g' \
       -e 's|deb.debian.org/debian|archive.debian.org/debian|g' \
       -e '/bullseye-updates/d' \
+      -e '/debian-security/d' \
       /etc/apt/sources.list \
  && echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99archive
 
