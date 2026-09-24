@@ -12,11 +12,19 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 
 RUN npm i -g npm@6
-RUN apt update && apt upgrade -y
-RUN apt install python zip libzip-dev -y
+# bullseye is EOL: use archive.debian.org
+RUN sed -i \
+      -e 's|deb.debian.org/debian-security|archive.debian.org/debian-security|g' \
+      -e 's|deb.debian.org/debian|archive.debian.org/debian|g' \
+      -e '/bullseye-updates/d' \
+      /etc/apt/sources.list \
+ && echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99archive
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends python zip libzip-dev nginx \
+ && rm -rf /var/lib/apt/lists/*
 
 # Setup NGINX
-RUN apt install nginx -y
 RUN rm /etc/nginx/sites-enabled/default
 COPY ./deploy/nginx/nginx.conf /etc/nginx/sites-enabled/wowaffixes
 
