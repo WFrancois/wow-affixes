@@ -24,8 +24,8 @@ COPY ./deploy/nginx/nginx.conf /etc/nginx/sites-enabled/wowaffixes
 RUN docker-php-ext-install zip intl opcache
 COPY deploy/php/opcache.ini "$PHP_INI_DIR/conf.d/opcache.ini"
 
-RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
- && echo "session.upload_progress.enabled = 0" > "$PHP_INI_DIR/conf.d/session.ini"
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+COPY deploy/php/hardening.ini "$PHP_INI_DIR/conf.d/zz-hardening.ini"
 
 WORKDIR /home/app
 
