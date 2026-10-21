@@ -3,6 +3,11 @@ framework:
     #csrf_protection: ~
     #http_method_override: true
 
+    # Set TRUSTED_PROXIES / TRUSTED_HOSTS env vars to enable them
+    trusted_proxies: '%env(default::TRUSTED_PROXIES)%'
+    trusted_headers: ['x-forwarded-for', 'x-forwarded-host', 'x-forwarded-proto', 'x-forwarded-port']
+    trusted_hosts: '%env(default::TRUSTED_HOSTS)%'
+
     # Enables session support. Note that the session will ONLY be started if you read or write from it.
     # Remove or comment this section to explicitly disable session support.
     session:
