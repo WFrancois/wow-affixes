@@ -1,7 +1,7 @@
 # This is not how a dockerfile should be (best would be to run fpm & nginx as separate container)
 
 FROM node:14 AS node
-FROM php:8.3-fpm-bookworm
+FROM php:8.5-fpm-bookworm
 
 LABEL com.centurylinklabs.watchtower.stop-signal="SIGKILL"
 LABEL com.centurylinklabs.watchtower.enable="true"
@@ -20,8 +20,7 @@ RUN apt-get update \
 RUN rm /etc/nginx/sites-enabled/default
 COPY ./deploy/nginx/nginx.conf /etc/nginx/sites-enabled/wowaffixes
 
-
-RUN docker-php-ext-install zip intl opcache
+RUN docker-php-ext-install zip intl
 COPY deploy/php/opcache.ini "$PHP_INI_DIR/conf.d/opcache.ini"
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
